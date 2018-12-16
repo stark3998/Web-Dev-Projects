@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--<link rel="stylesheet" type="text/css" href="Images\webc1.css">-->
+	<link rel="icon" href="Images\car1.jpeg">
+	<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>STARK Warehouse</title>
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="Jatin">
+<meta name="author" content="Jatin Madan">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+
+<link rel="stylesheet" href="css/owl.theme.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/mycss.css">
+
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+    border-radius: 20px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+	border-radius: 20px;
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+
+<!-- MENU -->
+<div class="navbar custom-navbar navbar-fixed-top" role="navigation">
+     <div class="container">
+
+          <!-- NAVBAR HEADER -->
+          <div class="navbar-header">
+               <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+               </button>
+               <!-- lOGO 
+               <a href="index.html" class="navbar-brand">Jatin, Harika, Shikhar</a> -->
+               <a href="index.html" class="navbar-brand">Ankit, Piyush</a>
+          </div>
+
+          <!-- MENU LINKS
+          <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Home.htm" class="smoothScroll">Home</a></li>
+                    <li><a href="soon.htm" class="smoothScroll">Projects</a></li>
+                    <li><a href="soon.htm" class="smoothScroll">Portfolio</a></li>  
+                    <li><a href="soon.htm" class="smoothScroll">Let's talk</a></li>
+               </ul>
+          </div>-->
+
+     </div>
+</div>
+
+<div id="id01" class="modal">
+  
+  <form method="post" class="modal-content animate" action="auth.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="Images\profile.png" width=20px alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+
+<!-- HOME -->
+<section id="home" class="parallax-section">
+     <div class="overlay"></div>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-8 col-sm-12">
+                    <div class="home-text">
+                         <h2 style="color: white; font-size: 40px;">Inventory Management System</h2>
+			 <!--<p>Hi ! <br> I am a second year B.Tech Student at VIT Vellore as of present. I created this website with the goal of displaying my Projects and Learning to the world.</p>-->
+			 	<p>Simplify, Standardize and Secure</p>
+
+                         <ul class="section-btn">
+                              <a class="smoothScroll" onclick="document.getElementById('id01').style.display='block'"><span data-hover="Login">Login</span></a>
+                         </ul>
+                    </div>
+               </div>
+
+          </div>
+     </div>
+
+     <!-- Video -->
+     <video controls="" autoplay="" loop="" muted>
+          <source src="videos/video.mp4" type="video/mp4">
+          Your browser needs to be Updated....
+     </video>
+</section>
+
+<!--
+	<div class="row">
+  		<div class="leftcolumn">
+    			<div class="card">
+      				<h2>Windows Bot OS</h2>
+      				<h5>Title description, Dec 7, 2017</h5>
+      				<div class="fakeimg" style="height:200px;">
+					Image
+				</div>
+      				<p>Some text..</p>
+      				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    			</div>
+    			<div class="card">
+      				<h2>TITLE HEADING</h2>
+      				<h5>Title description, Sep 2, 2017</h5>
+      				<div class="fakeimg" style="height:200px;">
+					Image
+				</div>
+      				<p>Some text..</p>
+      				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    			</div>
+  		</div>
+ 	
+		<div class="rightcolumn">
+    			<div class="card2">
+  				<img src="Images\human.jpg" alt="Jatin" style="width:100%; border-radius:20px;">
+  				<h1>Jatin Madan</h1>
+  				<p class="title">2<sup>nd</sup> Year B.Tech CSE Student</p>
+  				<p>VIT University, Vellore</p>
+  				<a href="#"><i class="fa fa-dribbble"></i></a> 
+  				<a href="#"><i class="fa fa-twitter"></i></a> 
+  				<a href="#"><i class="fa fa-linkedin"></i></a> 
+  				<a href="#"><i class="fa fa-facebook"></i></a> 
+  				<ul class="section-btn">
+                              		<a href="soon.htm" class="smoothScroll"><span data-hover="Contact Me">Contact Me</span></a>
+                         	</ul>
+			</div>
+   			<div class="card2">
+      				<h3>Popular Post</h3>
+      				<div class="fakeimg"><p>Image</p></div>
+      				<div class="fakeimg"><p>Image</p></div>
+      				<div class="fakeimg"><p>Image</p></div>
+    			</div>
+    			<div class="card2">
+      				<h3>Follow Me</h3>
+      				<p>Some text..</p>
+    			</div>
+  		</div>
+	</div>
+
+-->
+
+<!-- FOOTER -->
+
+<!--
+<footer>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-5 col-sm-6">
+                    <h2>University</h2>
+                    <p>B-229 B Block, <br> Men's Hostel, <br> VIT University, <br> Vellore - 632014</p>
+                    
+                    
+               </div>
+
+               <div class="col-md-4 col-sm-6">
+                    <div class="footer-info">
+                    	<h2>Keep in touch</h2>
+                         <p><a href="tel:9711300555">9711300555</a></p>
+                         <p><a href="mailto:jatin.madan39@gmail.com">jatin.madan39@gmail.com</a></p>
+                         <p><a href="#">D-98 Jhilmil Colony</a></p>
+                    </div>
+               </div>
+
+               <div class="col-md-3 col-sm-12">
+               		
+                    <h2>About Me</h2>
+                    <p>Sed vestibulum posuere ante, eget blandit metus. Morbi sodales feugiat erat, et placerat sapien suscipit ut.</p>
+                    <ul class="social-icon">
+                         <li><a href="#" class="fa fa-twitter"></a></li>
+                         <li><a href="#" class="fa fa-facebook"></a></li>
+                         <li><a href="#" class="fa fa-instagram"></a></li>
+                         <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+                    
+               </div>
+
+               <div class="clearfix"></div>
+
+               <div class="col-md-12 col-sm-12">
+                    <div class="copyright-text">
+                         <p>Jatin Madan</p>
+                    </div>
+               </div>
+               
+          </div>
+     </div>
+</footer>
+-->
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+	<script src="script.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.parallax.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<!--<script src="js/smoothscroll.js"></script>-->
+	<<script src="js/custom.js"></script>
+</body>
+
+</html>

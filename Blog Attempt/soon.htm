@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="Images\human.jpg">
+<title>Coming Soon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bgimg {
+    background-image: url('Images/forestbridge.jpg');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+}
+
+.topright {
+    position: absolute;
+    top: 0;
+    right: 16px;
+    margin: 20px;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}
+
+button {
+	background: transparent;
+	border-style: none;
+	color: white;
+   	font-family: "Courier New", Courier, monospace;
+    	font-size: 25px;
+	position: relative;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="bgimg">
+  <div class="topleft">
+    <p>Jatin Madan</p>
+  </div>
+
+  <div class="topright">
+    <button type="button" onclick="javascript:history.back()"> Go Back</button>
+  </div>
+
+  <div class="middle">
+    <h1>COMING SOON</h1>
+    <hr>
+    <p id="timer">35 days left</p>
+  </div>
+  <div class="bottomleft">
+    <p id="tim_cur">Still Working on it ....</p>
+  </div>
+</div>
+
+<script>
+	var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+	var x = setInterval(function() {
+    		var now = new Date().getTime();
+    		var distance = countDownDate - now;
+    		var days 	= Math.floor(distance / (1000 * 60 * 60 * 24));
+    		var hours 	= Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    		var minutes 	= Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    		var seconds 	= Math.floor((distance % (1000 * 60)) / 1000);
+		var miliseconds = Math.floor(distance % (1000));
+    		document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+    			+ minutes + "m " + seconds + "s " + miliseconds + "ms ";
+   		if (distance < 0) {
+        		clearInterval(x);
+        		document.getElementById("timer").innerHTML = "I am Sorry, I thought I would have been done by now ....";
+    		}
+	}, 1);
+	
+	var cur_time = setInterval(function(){ myTimer() }, 1000);
+	function myTimer() {
+    		var d = new Date();
+    		var t = d.toLocaleTimeString();
+    		document.getElementById("tim_cur").innerHTML = t;
+	}
+
+</script>
+
+</body>
+</html>
